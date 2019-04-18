@@ -316,6 +316,28 @@ savefigs("mesh-scatter", ans) # hide
 
 ------------------------
 
+## Quiver plot
+
+```@example pgf
+@pgf Axis({title = "Quiver and plot table"},
+            PlotInc({
+                blue,
+                "quiver" = {u = "\\thisrow{u}",v = "\\thisrow{v}"},
+                "-stealth",
+                mark = "none",
+            },
+                Table(; x = 0:4, y = [0,1,4,9,16], u = [1,1,1,1,1], v = [0,1,4,6,8])
+            )
+        )
+savefigs("quiver-table", ans) # hide
+```
+
+[\[.pdf\]](quiver-table.pdf), [\[generated .tex\]](quiver-table.tex)
+
+![](quiver-table.svg)
+
+------------------------
+
 ## Group plot
 
 ```@example pgf
